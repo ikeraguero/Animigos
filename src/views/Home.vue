@@ -12,7 +12,7 @@
         </v-carousel>
       </v-col>
       <v-col>
-        <p class="slogan">Ajude uma causa, voluntarie-se!</p>
+        <p class="slogan">Ajude uma causa, voluntarie-se agora!</p>
 
         <br /><br />
 
