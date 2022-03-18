@@ -2,50 +2,46 @@
   <v-container class="pa-8" fluid>
     <h1 class="h1"></h1>
     <v-row>
-      <v-col cols="5">
-        <v-carousel hide-delimiters>
-          <v-carousel-item
-            v-for="(item, i) in items"
-            :key="i"
-            :src="item.src"
-          ></v-carousel-item>
-        </v-carousel>
+      <v-col cols=5>
+     <mosaico-animais />
       </v-col>
       <v-col>
-        <p class="slogan">Ajude uma causa, voluntarie-se agora!</p>
+        <p class="slogan">
+            Doe um lar, adote um animal.  
+        </p>
 
-        <br /><br />
+        <br><br>
 
-        <div class="d-flex justify-space-around mt-16">
-          <v-btn icon min-width="200" link to="/queroadotar">
+          <div class="d-flex justify-space-around mt-16 ">
+
+            <v-btn icon min-width="200" link to="/queroadotar">
+            <v-img 
+            link to="/perfil"
+            class="posicao"
+            lazy-src="@/assets/imagens/3.png"
+            max-height="200px"
+            max-width="500px"
+            src="@/assets/imagens/3.png" 
+          ></v-img>
+            </v-btn>
+
+            <v-btn icon min-width="200" link to="/queroajudar">
+
             <v-img
-              link
-              to="/perfil"
-              class="posicao"
-              lazy-src="@/assets/imagens/3.png"
-              max-height="200px"
-              max-width="500px"
-              src="@/assets/imagens/3.png"
-            ></v-img>
-          </v-btn>
-
-          <v-btn icon min-width="200" link to="/queroajudar">
-            <v-img
-              class="posicao"
-              lazy-src="@/assets/imagens/4.png"
-              max-height="200"
-              max-width="500"
-              src="@/assets/imagens/4.png"
-            ></v-img>
-          </v-btn>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class="d-flex justify-space-around">
-          <h1>Fazer Quiz</h1>
-          <h1>Escolher Causa</h1>
-        </div>
+            class="posicao"
+            lazy-src="@/assets/imagens/4.png"
+            max-height="200"
+            max-width="500"
+            src="@/assets/imagens/4.png"
+          ></v-img>
+            </v-btn> 
+          </div>
+          <br> <br> <br>
+          <div class="d-flex justify-space-around">
+            <h1>Quero Adotar</h1> 
+            <h1>Quero Ajudar</h1>
+          </div>
+        
       </v-col>
     </v-row>
     <v-row>
@@ -54,50 +50,42 @@
       </v-col>
     </v-row>
   </v-container>
+
 </template>
 
 <script>
- export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-          }
-        ]
-      }
+import MosaicoAnimais from '@/components/template/MosaicoAnimais'
+export default {
+  components: {MosaicoAnimais},
+  methods: {
+    teste() {
+      alert('oioioi')
     }
   }
+}
 </script>
 
 <style>
-.posicao {
+.posicao{
   display: inline-block;
 }
 
 .slogan {
-  font-family: "Reenie Beanie", cursive;
+  font-family: 'Reenie Beanie', cursive;
   text-align: center;
   color: #f8f8f2;
   font-size: 60px;
 }
 
-h1 {
+h1{
   color: #f8f8f2;
-  font-family: "Reenie Beanie", cursive;
+  font-family: 'Reenie Beanie', cursive;
   font-size: 60px;
 }
 
-.titulo-resto {
+.titulo-resto{
   text-align: center;
 }
+
+
 </style>
