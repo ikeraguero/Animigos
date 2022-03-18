@@ -4,22 +4,23 @@
       
       <v-btn icon min-width="250px" link to="/">
       <v-img
-        src="@/assets/imagens/logoanimal.jpeg"
-        max-width="250px"
-        max-height="250px"
+      class="logo"
+        src="@/assets/imagens/logo-retangular-trans.png"
+        max-height="100px"
+        max-width="450px"
       >
       </v-img>
       </v-btn>
       
       <v-spacer></v-spacer>
-      <v-btn icon color="#728b88" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
-      <v-app-bar-nav-icon color="#728b88" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
+      <v-btn icon color="#050a30" large on click link to="/perfil"><v-icon>mdi-account</v-icon></v-btn>
+      <v-app-bar-nav-icon color="#050a30" large @click.stop="sidebar = !sidebar"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer color="#f8f8f2" right app v-model="sidebar" :mini-variant.sync="mini">
       <v-list dense color="#F8F7F2" dark height="100">
         <v-list-item>
           <v-list-item-action>
-            <v-icon color="#728b88" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
+            <v-icon color="#050a30" @click.stop="sidebar = !sidebar">mdi-chevron-right</v-icon>
           </v-list-item-action>
           <v-list-item-title>
             <h3 class="conta" >Minha Conta</h3>
@@ -73,18 +74,21 @@ export default {
 </script>
 
 <style>
+.logo{
+  position: center;
+}
 .fundo{
-  background-color:#728b88 ;
+  background-color:#050a30 ;
 }
 .conta{
   padding: auto 9px;
-  color: #728b88;
+  color: #050a30;
 }
 
 .v-list-item__content {
-  color: #728b88;
+  color: #050a30;
 }
 .v-list-item__icon {
-  color: #728b88;
+  color: #050a30;
 }
 </style>
